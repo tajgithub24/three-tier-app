@@ -12,7 +12,7 @@ The app allows users to **sign up**, **log in**, and **view dashboard data**.
 ---
 
 ## ⚙️ Architecture Overview
-
+```scss
 Browser (User)
 │
 ▼
@@ -23,8 +23,7 @@ Browser (User)
 │
 ▼
 **[Azure MySQL Database]**
-
----
+```
 
 ## ⚙️ Technologies Used
 | Layer | Technology | Description |
@@ -36,7 +35,7 @@ Browser (User)
 ---
 
 ## 🗂️ Folder Structure
-
+```scss
 root/
 │
 ├── frontend/
@@ -54,6 +53,7 @@ root/
 ├── index.js # Express API
 ├── package.json
 └── .env
+```
 
 ### 🗄️ Database Setup
 Create test_db database
