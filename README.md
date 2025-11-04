@@ -11,19 +11,18 @@ The app allows users to **sign up**, **log in**, and **view dashboard data**.
 
 ---
 
-## 🏗️ Architecture
+## ⚙️ Architecture Overview
 
 Browser (User)
 │
 ▼
-[Frontend App Service - React + Express Proxy]
+**[Frontend App Service - React + Express Proxy]**
 │
 ▼
-[Backend App Service - Node.js + Express API]
+**[Backend App Service - Node.js + Express API]**
 │
 ▼
-[Azure MySQL Database]
-
+**[Azure MySQL Database]**
 
 ---
 
@@ -36,17 +35,18 @@ Browser (User)
 
 ---
 
-## 📁 Project Structure
+## 🗂️ Folder Structure
 
 root/
 │
 ├── frontend/
 │ ├── src/
 │ │ ├── App.js
-│ │ ├── components/Dashboard.js
+│ │ ├── components/
+│ │ │ └── Dashboard.js
 │ │ └── api.js
 │ ├── build/
-│ ├── server.js # Express proxy + static server
+│ ├── server.js # Express proxy + static React build server
 │ ├── package.json
 │ └── .env
 │
@@ -54,8 +54,6 @@ root/
 ├── index.js # Express API
 ├── package.json
 └── .env
-
----
 
 ### 🗄️ Database Setup
 Create test_db database
