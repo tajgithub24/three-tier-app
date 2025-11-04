@@ -82,8 +82,8 @@ SELECT * FROM users;
 
 ### Environment Variables (`.env`)
 ```bash
-DB_HOST=4.247.xxx.xxx
-DB_USER=root
+DB_HOST=xxx.xxx.xxx.xxx
+DB_USER=<db-username>
 DB_PASSWORD=<db_password>
 DB_NAME=test_db
 PORT=5000
@@ -114,6 +114,8 @@ Should return:
 Zip backend folder and deploy to a Node.js App Service.
 
 ```bash
+cd backend
+zip -r backend.zip .
 az webapp deploy --resource-group <resource-group-name> --name <backend-app-name> --src-path backend.zip
 ```
 
@@ -142,6 +144,8 @@ npm run build
 Zip frontend folder and deploy to a Node.js App Service.
 
 ```bash
+cd frontend
+zip -r frontend.zip .
 az webapp deploy --resource-group <resource-group-name> --name <frontend-app-name> --src-path frontend.zip
 ```
 
@@ -150,3 +154,6 @@ Access:
 ```bash
 https://<frontend-app>.azurewebsites.net
 ```
+
+Note:
+Backend should have CORS enabled if directly accessed by browser.
