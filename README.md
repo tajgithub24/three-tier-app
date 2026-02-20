@@ -1,4 +1,4 @@
-# three-tier-app
+# Three-Tier-App
 # 🌐 Three-Tier Web Application (React + Node.js + MySQL) on Azure App Services
 
 ## 🧩 Overview
@@ -102,6 +102,9 @@ Visit:
 http://localhost:5000
 
 ```
+```arduino
+http://<Backend-server-IP>:5000
+```
 
 ```json
 Should return:
@@ -129,6 +132,10 @@ https://<backend-app>.azurewebsites.net
 ### Environment Variables (.env)
 
 ```bash
+REACT_APP_BACKEND_URL=http://<Backend-server-IP>:5000
+```
+OR
+```bash
 REACT_APP_BACKEND_URL=https://<backend-app>.centralindia-01.azurewebsites.net
 ```
 
@@ -139,6 +146,22 @@ cd frontend
 npm install
 npm run build
 ```
+
+### Run Locally
+```bash
+npm start
+```
+
+### Verify
+```arduino
+Visit:
+
+http://localhost 
+```
+```arduino
+http://<Frontend-server-IP> 
+```
+
 ### Deploy Frontend to Azure
 
 Zip frontend folder and deploy to a Node.js App Service.
@@ -155,5 +178,5 @@ Access:
 https://<frontend-app>.azurewebsites.net
 ```
 
-Note:
+# Note:
 Backend should have CORS enabled if directly accessed by browser.
