@@ -55,9 +55,9 @@ root/
 └── .env
 ```
 
-## 1.0 🗄️ Database Setup
+# 1.0 🗄️ Database Setup
 
-# 1.1 Connect to SQL server
+### 1.1 Connect to SQL server
 
 ```sql
 -- connect as sa using sqlcmd:
@@ -68,7 +68,7 @@ sqlcmd -S <Server-IP> -E
 
 ```
 
-# 1.2 Create a SQL Server login user
+### 1.2 Create a SQL Server login user
 
 ```sql
 
@@ -82,7 +82,7 @@ GO
 
 ```
 
-# 1.3 Create test_db database
+### 1.3 Create test_db database
 
 ```sql
 
@@ -93,7 +93,7 @@ USE test_db;
 GO
 
 ```
-# 1.4 Create Table
+### 1.4 Create Table
 
 ```sql
 
@@ -107,7 +107,7 @@ CREATE TABLE users (
 GO
 ```
 
-# 1.5 Insert sample data (optional)
+### 1.5 Insert sample data (optional)
 
 ```sql
 
@@ -119,7 +119,7 @@ GO
 
 ```
 
-# 1.6 Verify:
+### 1.6 Verify:
 
 ```sql
 sqlcmd -S <DB_HOST> -U cluster_user -P <DB_PASSWORD>
@@ -166,9 +166,9 @@ GO
 
 ```
 
-### 2.0 Backend Setup
+# 2.0 Backend Setup
 
-# 2.1 Environment Variables (`.env`)
+### 2.1 Environment Variables (`.env`)
 
 ```bash
 DB_HOST=xxx.xxx.xxx.xxx
@@ -178,7 +178,7 @@ DB_NAME=test_db
 PORT=5000
 
 ```
-# 2.2 Install & Run Locally
+### 2.2 Install & Run Locally
 
 ```bash
 cd backend
@@ -186,7 +186,7 @@ npm install
 npm start
 ```
 
-# 2.3 Verify
+### 2.3 Verify
 ```arduino
 Visit:
 http://localhost:5000
@@ -203,7 +203,7 @@ Should return:
 { "message": "Backend running" }
 ```
 
-# 2.4 Deploy backend to Azure
+### 2.4 Deploy backend to Azure
 
 Zip backend folder and deploy to a Node.js App Service.
 
@@ -219,8 +219,8 @@ Access:
 https://<backend-app>.azurewebsites.net
 ```
 
-### 3.0 Frontend Setup
-# 3.1 Environment Variables (.env)
+# 3.0 Frontend Setup
+### 3.1 Environment Variables (.env)
 
 ```arduino
 REACT_APP_BACKEND_URL=http://<Backend-server-IP>:5000
@@ -230,14 +230,32 @@ OR
 REACT_APP_BACKEND_URL=https://<backend-app>.centralindia-01.azurewebsites.net
 ```
 
-### Install & Build
+### 3.2 Install & Build
 
 ```bash
 cd frontend
 npm install
 npm run build
 ```
-### Deploy Frontend to Azure
+
+### 3.3 Run Locally
+
+```bash
+npm start
+```
+
+### 3.4 Verify
+```arduino
+Visit:
+http://localhost
+
+```
+OR
+```arduino
+http://<Frontend-server-IP>
+```
+
+### 3.5 Deploy Frontend to Azure
 
 Zip frontend folder and deploy to a Node.js App Service.
 
