@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const { createProxyMiddleware } = require('http-proxy-middleware');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 80;
@@ -11,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 // proxy API requests to backend (server-side)
 app.use('/api', createProxyMiddleware({
-  target: process.env.REACT_APP_BACKEND_URL || 'https://backend-app123-g4c4a4ggdtb4fzdy.centralindia-01.azurewebsites.net',
+  target: process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000',
   changeOrigin: true,
   secure: true, // keep true for TLS
   pathRewrite: { '^/api': '' }, // maps /api/signup -> /signup
