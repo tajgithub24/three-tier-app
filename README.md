@@ -1,4 +1,4 @@
-# three-tier-app
+# Three-Tier-App
 # 🌐 Three-Tier Web Application (React + Node.js + MSSQL) on Azure App Services
 
 ## 🧩 Overview
