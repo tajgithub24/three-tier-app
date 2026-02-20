@@ -102,6 +102,7 @@ Visit:
 http://localhost:5000
 
 ```
+OR
 ```arduino
 http://<Backend-server-IP>:5000
 ```
@@ -158,6 +159,7 @@ Visit:
 
 http://localhost 
 ```
+OR
 ```arduino
 http://<Frontend-server-IP> 
 ```
@@ -178,5 +180,5 @@ Access:
 https://<frontend-app>.azurewebsites.net
 ```
 
-# Note:
+### Note:
 Backend should have CORS enabled if directly accessed by browser.
